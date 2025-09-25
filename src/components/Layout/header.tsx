@@ -11,12 +11,13 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import logo from "../../../public/layout/Logo.svg";
 import Link from "next/link";
+import { DownloadButton } from "../downloadButtons";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-[#3C87F4CC]/80">
-      <div className="container mx-auto px-4 xl:px-36 py-4">
-        <div className="flex items-center justify-between">
+    <header className="sticky top-0 h-[70px] z-50 bg-[#3C87F4CC]/80">
+      <div className="container mx-auto px-4 xl:px-36 h-full">
+        <div className="flex items-center justify-between h-full">
           <Link href="/" className="flex items-center space-x-2">
             <Image src={logo} alt="logo" width={100} height={100} />
           </Link>
@@ -53,25 +54,32 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a
+            <Link
               href="#features"
               className="text-white text-lg font-semibold hover:text-blue-200 transition-colors"
             >
               주요 기능
-            </a>
-            <a
+            </Link>
+            <Link
               href="#scenarios"
               className="text-white text-lg font-semibold hover:text-blue-200 transition-colors"
             >
               활용 사례
-            </a>
-            <a
+            </Link>
+            <Link
               href="#faq"
               className="text-white text-lg font-semibold hover:text-blue-200 transition-colors"
             >
               FAQ
-            </a>
+            </Link>
           </nav>
+
+          <div className="items-center justify-center hidden md:flex">
+            <DownloadButton
+              variant="google-play"
+              className="bg-[#2269D0] max-h-[50px]"
+            />
+          </div>
         </div>
       </div>
     </header>
