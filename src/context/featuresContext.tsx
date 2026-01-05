@@ -29,8 +29,7 @@ const featuresData: FeatureItem[] = [
       />
     ),
     title: "실시간 안전 관리",
-    description:
-      "현장을 실시간으로 확인하고, 위험을 즉시 파악하세요. 관리자와 작업자가 빠르게 소통할 수 있습니다.",
+    description: `현장을 실시간으로 확인하고, 위험을 즉시 파악하세요.\n관리자와 작업자가 빠르게 소통할 수 있습니다.`,
   },
   {
     icon: (
@@ -43,7 +42,7 @@ const featuresData: FeatureItem[] = [
     ),
     title: "간편한 보고서 작성(예정)",
     description:
-      "AI로 사고·위험 보고서를 손쉽게 작성·공유하고 스마트한 안전관리를 실현하세요.",
+      "AI로 사고·위험 보고서를 손쉽게 작성·공유하고 \n 스마트한 안전관리를 실현하세요.",
   },
   {
     icon: (
@@ -56,7 +55,7 @@ const featuresData: FeatureItem[] = [
     ),
     title: "긴급 상황 알림",
     description:
-      "위험 지역 진입 등 긴급 상황 발생 시 비콘 알림을 보내어 신속한 대응을 돕습니다.",
+      "작업자의 위치를 GPS로 실시간 파악하여 \n 위험 상황 발생 시 신속한 대응이 가능합니다.",
   },
 ];
 

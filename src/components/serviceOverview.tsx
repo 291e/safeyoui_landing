@@ -5,15 +5,14 @@ export function ServiceOverview() {
     <section className="py-6 ">
       <div className="">
         <div className="text-center mb-12">
-          <div className="text-sm font-bold text-gray-900 mb-6">
+          <div className="text-sm md:text-base lg:text-lg xl:text-xl font-bold text-gray-900 mb-6">
             Our service
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             다국적 근로자를 위한
-            <br className="block md:hidden" />
-            통합 안전관리 앱
+            <br className="block md:hidden" /> 통합 안전관리 앱
           </h2>
-          <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl mx-auto">
             안전해YOU는{" "}
             <span className="font-bold text-blue-500">
               {" "}
@@ -55,7 +54,7 @@ export function ServiceOverview() {
         </div>
 
         {/* Dotted Lines Pattern */}
-        <div className="relative w-full pt-86 mb-8">
+        <div className="relative w-full pt-86 xl:pt-120 mb-8">
           {/* Background Image - Full Width */}
           <div className="absolute top-10 inset-0 w-full h-full">
             <Image
@@ -92,7 +91,7 @@ export function ServiceOverview() {
               </div>
 
               {/* Central dot */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="w-5.5 h-5.5 bg-blue-300/80 rounded-full">
                   <div className="w-1.5 h-1.5 bg-blue-500 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
                 </div>
@@ -102,12 +101,13 @@ export function ServiceOverview() {
         </div>
 
         {/* Text over the map pattern */}
-        <div className="text-center relative -mt-24 z-10">
-          <div className=" text-blue-500 font-semibold mb-4">
+        <div className="text-center relative -top-24 xl:-top-44 -mt-24 z-10">
+          <div className=" text-blue-500 md:text-lg lg:text-xl font-semibold mb-4">
             한국어, 영어, 베트남어, 우즈벡어 등 실시간 번역 지원
           </div>
-          <h3 className="text-3xl font-bold text-gray-900">
-            모두의 안전은 언어 장벽을 넘어야 지켜집니다.
+          <h3 className="text-3xl md:text-4xl  font-bold text-gray-900">
+            모두의 안전은 언어 장벽을 <br className="block md:hidden" /> 넘어야
+            지켜집니다.
           </h3>
         </div>
       </div>

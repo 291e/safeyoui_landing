@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components/Layout/header";
-import { Footer } from "@/components/Layout/footer";
+import { LayoutProvider } from "@/components/Layout/LayoutProvider";
 
 export const metadata: Metadata = {
   title: "안전해유 (SafeYou) - 다국적 근로자를 위한 통합 안전관리 앱",
@@ -89,9 +88,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-pretendard antialiased overflow-x-hidden">
-        <Header />
-        {children}
-        <Footer />
+        <LayoutProvider>{children}</LayoutProvider>
       </body>
     </html>
   );

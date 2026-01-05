@@ -13,7 +13,7 @@ export default function Home() {
     <FeaturesProvider>
       <ScenariosProvider>
         <FaqProvider>
-          <div className="min-h-screen">
+          <div className="min-h-screen max-w-[1920px] mx-auto overflow-hidden">
             <HeroSection />
             <ServiceOverview />
             <MainFeatures />

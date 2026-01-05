@@ -14,15 +14,18 @@ export function FaqSection() {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-2 text-blue-500">
+          <Badge
+            variant="secondary"
+            className="mb-2 text-blue-500 text-sm md:text-base lg:text-lg xl:text-xl"
+          >
             FAQ
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
             자주 묻는 질문
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4 relative">
+        <div className="max-w-5xl mx-auto space-y-4 relative">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -43,7 +46,7 @@ export function FaqSection() {
                       Q
                     </motion.div>
                     <div className="flex-1">
-                      <h3 className=" font-bold text-gray-900 mb-3">
+                      <h3 className=" font-bold text-gray-900 mb-3 text-sm md:text-base lg:text-lg">
                         {faq.question}
                       </h3>
                       <div className="flex items-start space-x-3">
@@ -54,7 +57,7 @@ export function FaqSection() {
                         >
                           A
                         </motion.div>
-                        <p className="text-gray-600 leading-relaxed text-sm">
+                        <p className="text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg break-keep">
                           {faq.answer}
                         </p>
                       </div>

@@ -12,7 +12,7 @@ export function UserScenarios() {
   return (
     <section
       id="scenarios"
-      className="py-16 bg-gradient-to-b from-blue-100 to-neutral-100 relative overflow-hidden"
+      className="w-full bg-gradient-to-b py-32 from-blue-100 to-neutral-100 relative overflow-hidden"
     >
       <div className="px-4 md:px-8 lg:px-14">
         <div className="w-full h-[600px] bg-gradient-to-b from-blue-500 to-blue-400 rounded-xl md:rounded-2xl relative">
@@ -37,18 +37,23 @@ export function UserScenarios() {
 
           {/* Download Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 z-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
             <DownloadButton
-              variant="google-play"
-              className="bg-[#236AD0] min-w-[200px]"
+              variant="app-store"
+              className="bg-[#236AD0] min-w-[200px] z-20"
             />
             <DownloadButton
+              variant="google-play"
+              className="bg-[#236AD0] min-w-[200px] z-20"
+            />
+
+            <DownloadButton
               variant="collaboration"
-              className="bg-[#236AD0] min-w-[200px]"
+              className="bg-[#236AD0] min-w-[200px] z-20"
             />
           </motion.div>
           {/* Background Circles - Inside the rectangle */}
@@ -77,7 +82,7 @@ export function UserScenarios() {
         {scenarios.map((scenario, index) => (
           <motion.div
             key={index}
-            className="mb-16 mt-20 flex flex-col items-center md:flex-row justify-between"
+            className="mb-16 mt-20 flex flex-col items-center md:flex-row justify-between max-w-[1000px] mx-auto"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.3 }}
@@ -98,7 +103,7 @@ export function UserScenarios() {
                 </Badge>
               </motion.div>
               <motion.h3
-                className="text-2xl md:text-3xl font-bold text-gray-900 my-4"
+                className="text-2xl md:text-3xl lg:text-4xl  font-bold text-gray-900 my-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.3 + 0.3 }}
@@ -107,7 +112,7 @@ export function UserScenarios() {
                 {scenario.title}
               </motion.h3>
               <motion.p
-                className="text-gray-600 max-w-[320px] mx-auto text-sm"
+                className="text-gray-600  mx-auto text-sm md:text-base lg:text-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.3 + 0.4 }}
@@ -138,9 +143,9 @@ export function UserScenarios() {
                           <div className="w-full min-w-[160px] h-40 rounded-lg relative">
                             <Image
                               src={image.src}
-                              alt={image.alt}
+                              alt={image.alt as string}
                               fill
-                              className="object-cover rounded-lg"
+                              className="object-contain rounded-lg"
                             />
                           </div>
                           <div className="text-center max-w-[150px]">
@@ -170,9 +175,9 @@ export function UserScenarios() {
                       <div className="w-full h-full min-w-[300px] min-h-[300px] rounded-lg relative">
                         <Image
                           src={scenario.images[0].src}
-                          alt={scenario.images[0].alt}
+                          alt={scenario.images[0].alt as string}
                           fill
-                          className="object-cover"
+                          className="object-contain"
                         />
                       </div>
                     </CardContent>
@@ -198,7 +203,7 @@ export function UserScenarios() {
                             <div className="w-full h-full  rounded-lg relative flex items-center justify-center">
                               <Image
                                 src={image.src}
-                                alt={image.alt}
+                                alt={image.alt as string}
                                 fill
                                 className="object-contain"
                               />

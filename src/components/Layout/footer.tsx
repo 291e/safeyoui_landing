@@ -7,9 +7,9 @@ export function Footer() {
     <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-4 items-center pb-8">
-          <div className="size-4 opacity-40 bg-slate-400 rounded-[4px]" />
-          <div className="size-4 opacity-40 bg-white rounded-[4px]" />
-          <div className="size-4 bg-white rounded-[4px]" />
+          <div className="size-4  opacity-40 bg-slate-400 rounded-[4px]" />
+          <div className="size-4  opacity-40 bg-white rounded-[4px]" />
+          <div className="size-4  bg-white rounded-[4px]" />
         </div>
 
         <div className="text-center mb-12">
@@ -32,6 +32,10 @@ export function Footer() {
 
         {/* Download Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 mb-12">
+          <DownloadButton
+            variant="app-store"
+            className="bg-black/60 min-w-[200px]"
+          />
           <DownloadButton
             variant="google-play"
             className="bg-black/60 min-w-[200px]"
